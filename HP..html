@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KISMET | Official Website</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        // Tailwindのカスタマイズ設定
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        handwriting: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        kismet: {
+                            purple: '#9b5de5', // Kismetのメイン紫
+                            dark: '#121212',   // 背景の黒
+                            gray: '#2d2d2d'    // セクション背景の濃いグレー
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* ページ全体の基本スタイル */
+        body { background-color: #121212; color: #f3f4f6; scroll-behavior: smooth; }
+        /* ヒーローエリアの画像に被せるグラデーション */
+        .hero-overlay { background: linear-gradient(to bottom, rgba(18,18,18,0.3) 0%, rgba(18,18,18,1) 100%); }
+        /* ロゴが光る演出 */
+        .glow-text { text-shadow: 0 0 20px rgba(155, 93, 229, 0.6); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 bg-black/50 backdrop-blur-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="font-handwriting text-4xl text-white tracking-widest hover:text-kismet-purple transition-colors">KISMET</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors">HOME</a>
+                    <a href="#music" class="text-gray-300 hover:text-white transition-colors">MUSIC</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex flex-col items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="ジャケット.png" class="w-full h-full object-contain object-top opacity-60">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="font-handwriting text-8xl md:text-[10rem] text-white mb-2 glow-text tracking-tighter">KISMET</h1>
+            <p class="text-xl text-kismet-purple font-bold tracking-[0.5em] mb-8 uppercase">Virtual Artist Project</p>
+            <div class="inline-block border-t border-b border-gray-600 py-2 px-6">
+                <p class="text-sm text-gray-400 tracking-widest uppercase">produced by: To-chan</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="music" class="py-24 bg-kismet-gray">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="font-handwriting text-5xl text-center text-white mb-16">Music</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="bg-kismet-dark rounded-3xl p-8 border border-gray-800">
+                    <img src="resonating_grace.png" class="w-40 h-40 rounded-xl mb-6 mx-auto shadow-lg">
+                    <h3 class="text-2xl text-white font-bold text-center">Resonating Grace</h3>
+                    <a href="https://distrokid.com/hyperfollow/kismet15/resonating-grace" target="_blank" class="block mt-6 text-center py-3 bg-gradient-to-r from-kismet-purple to-indigo-600 rounded-full font-bold shadow-[0_0_15px_rgba(155,93,229,0.3)] hover:scale-[1.03] transition-all">LISTEN NOW</a>
+                </div>
+
+                <div class="bg-kismet-dark rounded-3xl p-8 border border-gray-800">
+                    <img src="Midnight Rain Step.png" class="w-40 h-40 rounded-xl mb-6 mx-auto object-cover shadow-lg" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'">
+                    <h3 class="text-2xl text-white font-bold text-center">Midnight Rain Step</h3>
+                    <a href="https://distrokid.com/hyperfollow/kismet15/midnight-rain-step" target="_blank" class="block mt-6 text-center py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full font-bold shadow-[0_0_15px_rgba(236,72,153,0.3)] hover:scale-[1.03] transition-all">PRE-SAVE NOW</a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 text-center text-gray-700 text-xs">
+        &copy; 2026 KISMET Official.
+    </footer>
+    
+    <script>lucide.createIcons();</script>
+</body>
+</html>
